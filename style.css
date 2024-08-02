@@ -1,15 +1,14 @@
 /* Made by Sandesh  
     Github: https://github.com/Sandesh2007
-    Facebook :San Desh 
+    Facebook: San Desh 
 */
 
-/* Styles for to-do app  */
+/* Styles for to-do app */
 
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap");
 
 /* Root variables for colors */
-
 :root {
   --clr: #58bc82;
   --primary-color: #333;
@@ -26,7 +25,6 @@
 }
 
 /* Reset default styles */
-
 * {
   margin: 0;
   padding: 0;
@@ -34,8 +32,7 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-/* styles for dark mode  */
-
+/* styles for dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --clr: #58bc82;
@@ -59,11 +56,13 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+
 .container {
   width: 100%;
   min-height: 100vh;
   padding: 10px;
 }
+
 .todo {
   background-color: transparent;
   max-width: 540px;
@@ -73,16 +72,19 @@ body {
   backdrop-filter: blur(10px);
   border: 2px solid var(--clr);
 }
+
 .todo h1 img {
   width: 30px;
   background: transparent;
   margin-left: 10px;
 }
+
 .todo h1 {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .row {
   display: flex;
   align-items: center;
@@ -92,6 +94,7 @@ body {
   background: #e8ecf5;
   justify-content: space-between;
 }
+
 input {
   background: transparent;
   flex: 1;
@@ -100,6 +103,7 @@ input {
   outline: none;
   font-weight: 14px;
 }
+
 button {
   border: none;
   outline: none;
@@ -110,8 +114,9 @@ button {
   cursor: pointer;
   border-radius: 40px;
 }
+
 ul li {
-    color: #fff;
+  color: #fff;
   position: relative;
   list-style: none;
   padding: 12px 8px 12px 50px;
@@ -119,6 +124,7 @@ ul li {
   user-select: none;
   cursor: pointer;
 }
+
 ul li::before {
   content: "";
   position: absolute;
@@ -131,40 +137,62 @@ ul li::before {
   top: 12px;
   left: 8px;
 }
-ul li.checked{
-    color: #555;
-    text-decoration:line-through;
-}
-ul li.checked::before{
-    background-image: url('assests/checked.png');
-}
-#task-status{
-    display: flex;
-    justify-self: center;
-    font-size: 18px;
-    margin-top: 10px;
-}
-ul li span{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size:22px ;
-    line-height: 40px;
-    text-align: center;
-    color: #fff;
-}
-ul li span:hover{
-    background-color: gray;
-    border-radius: 50%;
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
 }
 
-@media (max-width: 400px) {
-  .container{
-    width: auto;
+ul li.checked::before {
+  background-image: url('assests/checked.png');
+}
+
+#task-status {
+  display: flex;
+  justify-self: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+ul li span:hover {
+  background-color: gray;
+  border-radius: 50%;
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+  .todo {
+    padding: 20px;
+    margin: 50px auto 10px;
   }
-  .row{
-    width: auto;
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
   }
 }
